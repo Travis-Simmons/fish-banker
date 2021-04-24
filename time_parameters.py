@@ -1,12 +1,5 @@
 import pulp as p
 import random
-from functions import play_game
-
-ships_in_deep = 0
-ships_in_shallow = 0
-ships_in_harbor = 0
-
-
 BSTS_t1 = p.LpVariable("BSTS_t1", lowBound = 0)
 BSTS_t2 = p.LpVariable("BSTS_t2", lowBound = 0)
 BSTS_t3 = p.LpVariable("BSTS_t3", lowBound = 0)
@@ -207,12 +200,17 @@ ss_t17 = p.LpVariable("ss_t17", lowBound = 0)
 ss_t18 = p.LpVariable("ss_t18", lowBound = 0)
 ss_t19 = p.LpVariable("ss_t19", lowBound = 0)
 ss_t20 = p.LpVariable("ss_t20", lowBound = 0)
-
 def play_game(length_of_round):
 
     # build the matrix using the variable names eg: BSTS_x1, BSTS_x2...BSTS_x(length of round)
     # strategy = build_game_matrix(length_of_round)
-
+    global bank
+    global shallow_population
+    global deep_population
+    global ships_in_deep
+    global ships_in_shallow
+    global ships_in_harbor
+    global upkeep_total
 
     # Profit
     bank = 0
@@ -311,10 +309,6 @@ def play_game(length_of_round):
 
     # may also want to return summary stats for the run
     return bank
- 
-
-
-
 Lp_prob = p.LpProblem('Problem', p.LpMaximize)
 Lp_prob += play_game(20)
 Lp_prob += STD_t1 >=  ships_in_shallow
@@ -437,23 +431,23 @@ Lp_prob += HTS_t17 >=  ships_in_harbor
 Lp_prob += HTS_t18 >=  ships_in_harbor
 Lp_prob += HTS_t19 >=  ships_in_harbor
 Lp_prob += HTS_t20 >=  ships_in_harbor
-Lp_prob += SS_t1 <=  ships_in_harbor
-Lp_prob += SS_t2 <=  ships_in_harbor
-Lp_prob += SS_t3 <=  ships_in_harbor
-Lp_prob += SS_t4 <=  ships_in_harbor
-Lp_prob += SS_t5 <=  ships_in_harbor
-Lp_prob += SS_t6 <=  ships_in_harbor
-Lp_prob += SS_t7 <=  ships_in_harbor
-Lp_prob += SS_t8 <=  ships_in_harbor
-Lp_prob += SS_t9 <=  ships_in_harbor
-Lp_prob += SS_t10 <=  ships_in_harbor
-Lp_prob += SS_t11 <=  ships_in_harbor
-Lp_prob += SS_t12 <=  ships_in_harbor
-Lp_prob += SS_t13 <=  ships_in_harbor
-Lp_prob += SS_t14 <=  ships_in_harbor
-Lp_prob += SS_t15 <=  ships_in_harbor
-Lp_prob += SS_t16 <=  ships_in_harbor
-Lp_prob += SS_t17 <=  ships_in_harbor
-Lp_prob += SS_t18 <=  ships_in_harbor
-Lp_prob += SS_t19 <=  ships_in_harbor
-Lp_prob += SS_t20 <=  ships_in_harbor
+Lp_prob += ss_t1 <=  ships_in_harbor
+Lp_prob += ss_t2 <=  ships_in_harbor
+Lp_prob += ss_t3 <=  ships_in_harbor
+Lp_prob += ss_t4 <=  ships_in_harbor
+Lp_prob += ss_t5 <=  ships_in_harbor
+Lp_prob += ss_t6 <=  ships_in_harbor
+Lp_prob += ss_t7 <=  ships_in_harbor
+Lp_prob += ss_t8 <=  ships_in_harbor
+Lp_prob += ss_t9 <=  ships_in_harbor
+Lp_prob += ss_t10 <=  ships_in_harbor
+Lp_prob += ss_t11 <=  ships_in_harbor
+Lp_prob += ss_t12 <=  ships_in_harbor
+Lp_prob += ss_t13 <=  ships_in_harbor
+Lp_prob += ss_t14 <=  ships_in_harbor
+Lp_prob += ss_t15 <=  ships_in_harbor
+Lp_prob += ss_t16 <=  ships_in_harbor
+Lp_prob += ss_t17 <=  ships_in_harbor
+Lp_prob += ss_t18 <=  ships_in_harbor
+Lp_prob += ss_t19 <=  ships_in_harbor
+Lp_prob += ss_t20 <=  ships_in_harbor
