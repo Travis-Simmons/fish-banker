@@ -1,4 +1,5 @@
 import pulp as p
+import random
 BSTS_t1 = p.LpVariable("BSTS_t1", lowBound = 0)
 BSTS_t2 = p.LpVariable("BSTS_t2", lowBound = 0)
 BSTS_t3 = p.LpVariable("BSTS_t3", lowBound = 0)
@@ -19,24 +20,6 @@ BSTS_t17 = p.LpVariable("BSTS_t17", lowBound = 0)
 BSTS_t18 = p.LpVariable("BSTS_t18", lowBound = 0)
 BSTS_t19 = p.LpVariable("BSTS_t19", lowBound = 0)
 BSTS_t20 = p.LpVariable("BSTS_t20", lowBound = 0)
-BSTS_t21 = p.LpVariable("BSTS_t21", lowBound = 0)
-BSTS_t22 = p.LpVariable("BSTS_t22", lowBound = 0)
-BSTS_t23 = p.LpVariable("BSTS_t23", lowBound = 0)
-BSTS_t24 = p.LpVariable("BSTS_t24", lowBound = 0)
-BSTS_t25 = p.LpVariable("BSTS_t25", lowBound = 0)
-BSTS_t26 = p.LpVariable("BSTS_t26", lowBound = 0)
-BSTS_t27 = p.LpVariable("BSTS_t27", lowBound = 0)
-BSTS_t28 = p.LpVariable("BSTS_t28", lowBound = 0)
-BSTS_t29 = p.LpVariable("BSTS_t29", lowBound = 0)
-BSTS_t30 = p.LpVariable("BSTS_t30", lowBound = 0)
-BSTS_t31 = p.LpVariable("BSTS_t31", lowBound = 0)
-BSTS_t32 = p.LpVariable("BSTS_t32", lowBound = 0)
-BSTS_t33 = p.LpVariable("BSTS_t33", lowBound = 0)
-BSTS_t34 = p.LpVariable("BSTS_t34", lowBound = 0)
-BSTS_t35 = p.LpVariable("BSTS_t35", lowBound = 0)
-BSTS_t36 = p.LpVariable("BSTS_t36", lowBound = 0)
-BSTS_t37 = p.LpVariable("BSTS_t37", lowBound = 0)
-BSTS_t38 = p.LpVariable("BSTS_t38", lowBound = 0)
 STD_t1 = p.LpVariable("STD_t1", lowBound = 0)
 STD_t2 = p.LpVariable("STD_t2", lowBound = 0)
 STD_t3 = p.LpVariable("STD_t3", lowBound = 0)
@@ -57,24 +40,6 @@ STD_t17 = p.LpVariable("STD_t17", lowBound = 0)
 STD_t18 = p.LpVariable("STD_t18", lowBound = 0)
 STD_t19 = p.LpVariable("STD_t19", lowBound = 0)
 STD_t20 = p.LpVariable("STD_t20", lowBound = 0)
-STD_t21 = p.LpVariable("STD_t21", lowBound = 0)
-STD_t22 = p.LpVariable("STD_t22", lowBound = 0)
-STD_t23 = p.LpVariable("STD_t23", lowBound = 0)
-STD_t24 = p.LpVariable("STD_t24", lowBound = 0)
-STD_t25 = p.LpVariable("STD_t25", lowBound = 0)
-STD_t26 = p.LpVariable("STD_t26", lowBound = 0)
-STD_t27 = p.LpVariable("STD_t27", lowBound = 0)
-STD_t28 = p.LpVariable("STD_t28", lowBound = 0)
-STD_t29 = p.LpVariable("STD_t29", lowBound = 0)
-STD_t30 = p.LpVariable("STD_t30", lowBound = 0)
-STD_t31 = p.LpVariable("STD_t31", lowBound = 0)
-STD_t32 = p.LpVariable("STD_t32", lowBound = 0)
-STD_t33 = p.LpVariable("STD_t33", lowBound = 0)
-STD_t34 = p.LpVariable("STD_t34", lowBound = 0)
-STD_t35 = p.LpVariable("STD_t35", lowBound = 0)
-STD_t36 = p.LpVariable("STD_t36", lowBound = 0)
-STD_t37 = p.LpVariable("STD_t37", lowBound = 0)
-STD_t38 = p.LpVariable("STD_t38", lowBound = 0)
 STH_t1 = p.LpVariable("STH_t1", lowBound = 0)
 STH_t2 = p.LpVariable("STH_t2", lowBound = 0)
 STH_t3 = p.LpVariable("STH_t3", lowBound = 0)
@@ -95,24 +60,6 @@ STH_t17 = p.LpVariable("STH_t17", lowBound = 0)
 STH_t18 = p.LpVariable("STH_t18", lowBound = 0)
 STH_t19 = p.LpVariable("STH_t19", lowBound = 0)
 STH_t20 = p.LpVariable("STH_t20", lowBound = 0)
-STH_t21 = p.LpVariable("STH_t21", lowBound = 0)
-STH_t22 = p.LpVariable("STH_t22", lowBound = 0)
-STH_t23 = p.LpVariable("STH_t23", lowBound = 0)
-STH_t24 = p.LpVariable("STH_t24", lowBound = 0)
-STH_t25 = p.LpVariable("STH_t25", lowBound = 0)
-STH_t26 = p.LpVariable("STH_t26", lowBound = 0)
-STH_t27 = p.LpVariable("STH_t27", lowBound = 0)
-STH_t28 = p.LpVariable("STH_t28", lowBound = 0)
-STH_t29 = p.LpVariable("STH_t29", lowBound = 0)
-STH_t30 = p.LpVariable("STH_t30", lowBound = 0)
-STH_t31 = p.LpVariable("STH_t31", lowBound = 0)
-STH_t32 = p.LpVariable("STH_t32", lowBound = 0)
-STH_t33 = p.LpVariable("STH_t33", lowBound = 0)
-STH_t34 = p.LpVariable("STH_t34", lowBound = 0)
-STH_t35 = p.LpVariable("STH_t35", lowBound = 0)
-STH_t36 = p.LpVariable("STH_t36", lowBound = 0)
-STH_t37 = p.LpVariable("STH_t37", lowBound = 0)
-STH_t38 = p.LpVariable("STH_t38", lowBound = 0)
 BSTD_t1 = p.LpVariable("BSTD_t1", lowBound = 0)
 BSTD_t2 = p.LpVariable("BSTD_t2", lowBound = 0)
 BSTD_t3 = p.LpVariable("BSTD_t3", lowBound = 0)
@@ -133,24 +80,6 @@ BSTD_t17 = p.LpVariable("BSTD_t17", lowBound = 0)
 BSTD_t18 = p.LpVariable("BSTD_t18", lowBound = 0)
 BSTD_t19 = p.LpVariable("BSTD_t19", lowBound = 0)
 BSTD_t20 = p.LpVariable("BSTD_t20", lowBound = 0)
-BSTD_t21 = p.LpVariable("BSTD_t21", lowBound = 0)
-BSTD_t22 = p.LpVariable("BSTD_t22", lowBound = 0)
-BSTD_t23 = p.LpVariable("BSTD_t23", lowBound = 0)
-BSTD_t24 = p.LpVariable("BSTD_t24", lowBound = 0)
-BSTD_t25 = p.LpVariable("BSTD_t25", lowBound = 0)
-BSTD_t26 = p.LpVariable("BSTD_t26", lowBound = 0)
-BSTD_t27 = p.LpVariable("BSTD_t27", lowBound = 0)
-BSTD_t28 = p.LpVariable("BSTD_t28", lowBound = 0)
-BSTD_t29 = p.LpVariable("BSTD_t29", lowBound = 0)
-BSTD_t30 = p.LpVariable("BSTD_t30", lowBound = 0)
-BSTD_t31 = p.LpVariable("BSTD_t31", lowBound = 0)
-BSTD_t32 = p.LpVariable("BSTD_t32", lowBound = 0)
-BSTD_t33 = p.LpVariable("BSTD_t33", lowBound = 0)
-BSTD_t34 = p.LpVariable("BSTD_t34", lowBound = 0)
-BSTD_t35 = p.LpVariable("BSTD_t35", lowBound = 0)
-BSTD_t36 = p.LpVariable("BSTD_t36", lowBound = 0)
-BSTD_t37 = p.LpVariable("BSTD_t37", lowBound = 0)
-BSTD_t38 = p.LpVariable("BSTD_t38", lowBound = 0)
 DTS_t1 = p.LpVariable("DTS_t1", lowBound = 0)
 DTS_t2 = p.LpVariable("DTS_t2", lowBound = 0)
 DTS_t3 = p.LpVariable("DTS_t3", lowBound = 0)
@@ -171,24 +100,6 @@ DTS_t17 = p.LpVariable("DTS_t17", lowBound = 0)
 DTS_t18 = p.LpVariable("DTS_t18", lowBound = 0)
 DTS_t19 = p.LpVariable("DTS_t19", lowBound = 0)
 DTS_t20 = p.LpVariable("DTS_t20", lowBound = 0)
-DTS_t21 = p.LpVariable("DTS_t21", lowBound = 0)
-DTS_t22 = p.LpVariable("DTS_t22", lowBound = 0)
-DTS_t23 = p.LpVariable("DTS_t23", lowBound = 0)
-DTS_t24 = p.LpVariable("DTS_t24", lowBound = 0)
-DTS_t25 = p.LpVariable("DTS_t25", lowBound = 0)
-DTS_t26 = p.LpVariable("DTS_t26", lowBound = 0)
-DTS_t27 = p.LpVariable("DTS_t27", lowBound = 0)
-DTS_t28 = p.LpVariable("DTS_t28", lowBound = 0)
-DTS_t29 = p.LpVariable("DTS_t29", lowBound = 0)
-DTS_t30 = p.LpVariable("DTS_t30", lowBound = 0)
-DTS_t31 = p.LpVariable("DTS_t31", lowBound = 0)
-DTS_t32 = p.LpVariable("DTS_t32", lowBound = 0)
-DTS_t33 = p.LpVariable("DTS_t33", lowBound = 0)
-DTS_t34 = p.LpVariable("DTS_t34", lowBound = 0)
-DTS_t35 = p.LpVariable("DTS_t35", lowBound = 0)
-DTS_t36 = p.LpVariable("DTS_t36", lowBound = 0)
-DTS_t37 = p.LpVariable("DTS_t37", lowBound = 0)
-DTS_t38 = p.LpVariable("DTS_t38", lowBound = 0)
 DTH_t1 = p.LpVariable("DTH_t1", lowBound = 0)
 DTH_t2 = p.LpVariable("DTH_t2", lowBound = 0)
 DTH_t3 = p.LpVariable("DTH_t3", lowBound = 0)
@@ -209,24 +120,6 @@ DTH_t17 = p.LpVariable("DTH_t17", lowBound = 0)
 DTH_t18 = p.LpVariable("DTH_t18", lowBound = 0)
 DTH_t19 = p.LpVariable("DTH_t19", lowBound = 0)
 DTH_t20 = p.LpVariable("DTH_t20", lowBound = 0)
-DTH_t21 = p.LpVariable("DTH_t21", lowBound = 0)
-DTH_t22 = p.LpVariable("DTH_t22", lowBound = 0)
-DTH_t23 = p.LpVariable("DTH_t23", lowBound = 0)
-DTH_t24 = p.LpVariable("DTH_t24", lowBound = 0)
-DTH_t25 = p.LpVariable("DTH_t25", lowBound = 0)
-DTH_t26 = p.LpVariable("DTH_t26", lowBound = 0)
-DTH_t27 = p.LpVariable("DTH_t27", lowBound = 0)
-DTH_t28 = p.LpVariable("DTH_t28", lowBound = 0)
-DTH_t29 = p.LpVariable("DTH_t29", lowBound = 0)
-DTH_t30 = p.LpVariable("DTH_t30", lowBound = 0)
-DTH_t31 = p.LpVariable("DTH_t31", lowBound = 0)
-DTH_t32 = p.LpVariable("DTH_t32", lowBound = 0)
-DTH_t33 = p.LpVariable("DTH_t33", lowBound = 0)
-DTH_t34 = p.LpVariable("DTH_t34", lowBound = 0)
-DTH_t35 = p.LpVariable("DTH_t35", lowBound = 0)
-DTH_t36 = p.LpVariable("DTH_t36", lowBound = 0)
-DTH_t37 = p.LpVariable("DTH_t37", lowBound = 0)
-DTH_t38 = p.LpVariable("DTH_t38", lowBound = 0)
 BSTH_t1 = p.LpVariable("BSTH_t1", lowBound = 0)
 BSTH_t2 = p.LpVariable("BSTH_t2", lowBound = 0)
 BSTH_t3 = p.LpVariable("BSTH_t3", lowBound = 0)
@@ -247,24 +140,6 @@ BSTH_t17 = p.LpVariable("BSTH_t17", lowBound = 0)
 BSTH_t18 = p.LpVariable("BSTH_t18", lowBound = 0)
 BSTH_t19 = p.LpVariable("BSTH_t19", lowBound = 0)
 BSTH_t20 = p.LpVariable("BSTH_t20", lowBound = 0)
-BSTH_t21 = p.LpVariable("BSTH_t21", lowBound = 0)
-BSTH_t22 = p.LpVariable("BSTH_t22", lowBound = 0)
-BSTH_t23 = p.LpVariable("BSTH_t23", lowBound = 0)
-BSTH_t24 = p.LpVariable("BSTH_t24", lowBound = 0)
-BSTH_t25 = p.LpVariable("BSTH_t25", lowBound = 0)
-BSTH_t26 = p.LpVariable("BSTH_t26", lowBound = 0)
-BSTH_t27 = p.LpVariable("BSTH_t27", lowBound = 0)
-BSTH_t28 = p.LpVariable("BSTH_t28", lowBound = 0)
-BSTH_t29 = p.LpVariable("BSTH_t29", lowBound = 0)
-BSTH_t30 = p.LpVariable("BSTH_t30", lowBound = 0)
-BSTH_t31 = p.LpVariable("BSTH_t31", lowBound = 0)
-BSTH_t32 = p.LpVariable("BSTH_t32", lowBound = 0)
-BSTH_t33 = p.LpVariable("BSTH_t33", lowBound = 0)
-BSTH_t34 = p.LpVariable("BSTH_t34", lowBound = 0)
-BSTH_t35 = p.LpVariable("BSTH_t35", lowBound = 0)
-BSTH_t36 = p.LpVariable("BSTH_t36", lowBound = 0)
-BSTH_t37 = p.LpVariable("BSTH_t37", lowBound = 0)
-BSTH_t38 = p.LpVariable("BSTH_t38", lowBound = 0)
 HTS_t1 = p.LpVariable("HTS_t1", lowBound = 0)
 HTS_t2 = p.LpVariable("HTS_t2", lowBound = 0)
 HTS_t3 = p.LpVariable("HTS_t3", lowBound = 0)
@@ -285,24 +160,6 @@ HTS_t17 = p.LpVariable("HTS_t17", lowBound = 0)
 HTS_t18 = p.LpVariable("HTS_t18", lowBound = 0)
 HTS_t19 = p.LpVariable("HTS_t19", lowBound = 0)
 HTS_t20 = p.LpVariable("HTS_t20", lowBound = 0)
-HTS_t21 = p.LpVariable("HTS_t21", lowBound = 0)
-HTS_t22 = p.LpVariable("HTS_t22", lowBound = 0)
-HTS_t23 = p.LpVariable("HTS_t23", lowBound = 0)
-HTS_t24 = p.LpVariable("HTS_t24", lowBound = 0)
-HTS_t25 = p.LpVariable("HTS_t25", lowBound = 0)
-HTS_t26 = p.LpVariable("HTS_t26", lowBound = 0)
-HTS_t27 = p.LpVariable("HTS_t27", lowBound = 0)
-HTS_t28 = p.LpVariable("HTS_t28", lowBound = 0)
-HTS_t29 = p.LpVariable("HTS_t29", lowBound = 0)
-HTS_t30 = p.LpVariable("HTS_t30", lowBound = 0)
-HTS_t31 = p.LpVariable("HTS_t31", lowBound = 0)
-HTS_t32 = p.LpVariable("HTS_t32", lowBound = 0)
-HTS_t33 = p.LpVariable("HTS_t33", lowBound = 0)
-HTS_t34 = p.LpVariable("HTS_t34", lowBound = 0)
-HTS_t35 = p.LpVariable("HTS_t35", lowBound = 0)
-HTS_t36 = p.LpVariable("HTS_t36", lowBound = 0)
-HTS_t37 = p.LpVariable("HTS_t37", lowBound = 0)
-HTS_t38 = p.LpVariable("HTS_t38", lowBound = 0)
 HTD_t1 = p.LpVariable("HTD_t1", lowBound = 0)
 HTD_t2 = p.LpVariable("HTD_t2", lowBound = 0)
 HTD_t3 = p.LpVariable("HTD_t3", lowBound = 0)
@@ -323,24 +180,6 @@ HTD_t17 = p.LpVariable("HTD_t17", lowBound = 0)
 HTD_t18 = p.LpVariable("HTD_t18", lowBound = 0)
 HTD_t19 = p.LpVariable("HTD_t19", lowBound = 0)
 HTD_t20 = p.LpVariable("HTD_t20", lowBound = 0)
-HTD_t21 = p.LpVariable("HTD_t21", lowBound = 0)
-HTD_t22 = p.LpVariable("HTD_t22", lowBound = 0)
-HTD_t23 = p.LpVariable("HTD_t23", lowBound = 0)
-HTD_t24 = p.LpVariable("HTD_t24", lowBound = 0)
-HTD_t25 = p.LpVariable("HTD_t25", lowBound = 0)
-HTD_t26 = p.LpVariable("HTD_t26", lowBound = 0)
-HTD_t27 = p.LpVariable("HTD_t27", lowBound = 0)
-HTD_t28 = p.LpVariable("HTD_t28", lowBound = 0)
-HTD_t29 = p.LpVariable("HTD_t29", lowBound = 0)
-HTD_t30 = p.LpVariable("HTD_t30", lowBound = 0)
-HTD_t31 = p.LpVariable("HTD_t31", lowBound = 0)
-HTD_t32 = p.LpVariable("HTD_t32", lowBound = 0)
-HTD_t33 = p.LpVariable("HTD_t33", lowBound = 0)
-HTD_t34 = p.LpVariable("HTD_t34", lowBound = 0)
-HTD_t35 = p.LpVariable("HTD_t35", lowBound = 0)
-HTD_t36 = p.LpVariable("HTD_t36", lowBound = 0)
-HTD_t37 = p.LpVariable("HTD_t37", lowBound = 0)
-HTD_t38 = p.LpVariable("HTD_t38", lowBound = 0)
 ss_t1 = p.LpVariable("ss_t1", lowBound = 0)
 ss_t2 = p.LpVariable("ss_t2", lowBound = 0)
 ss_t3 = p.LpVariable("ss_t3", lowBound = 0)
@@ -361,26 +200,117 @@ ss_t17 = p.LpVariable("ss_t17", lowBound = 0)
 ss_t18 = p.LpVariable("ss_t18", lowBound = 0)
 ss_t19 = p.LpVariable("ss_t19", lowBound = 0)
 ss_t20 = p.LpVariable("ss_t20", lowBound = 0)
-ss_t21 = p.LpVariable("ss_t21", lowBound = 0)
-ss_t22 = p.LpVariable("ss_t22", lowBound = 0)
-ss_t23 = p.LpVariable("ss_t23", lowBound = 0)
-ss_t24 = p.LpVariable("ss_t24", lowBound = 0)
-ss_t25 = p.LpVariable("ss_t25", lowBound = 0)
-ss_t26 = p.LpVariable("ss_t26", lowBound = 0)
-ss_t27 = p.LpVariable("ss_t27", lowBound = 0)
-ss_t28 = p.LpVariable("ss_t28", lowBound = 0)
-ss_t29 = p.LpVariable("ss_t29", lowBound = 0)
-ss_t30 = p.LpVariable("ss_t30", lowBound = 0)
-ss_t31 = p.LpVariable("ss_t31", lowBound = 0)
-ss_t32 = p.LpVariable("ss_t32", lowBound = 0)
-ss_t33 = p.LpVariable("ss_t33", lowBound = 0)
-ss_t34 = p.LpVariable("ss_t34", lowBound = 0)
-ss_t35 = p.LpVariable("ss_t35", lowBound = 0)
-ss_t36 = p.LpVariable("ss_t36", lowBound = 0)
-ss_t37 = p.LpVariable("ss_t37", lowBound = 0)
-ss_t38 = p.LpVariable("ss_t38", lowBound = 0)
+def play_game(length_of_round):
+
+    # build the matrix using the variable names eg: BSTS_x1, BSTS_x2...BSTS_x(length of round)
+    # strategy = build_game_matrix(length_of_round)
+    global bank
+    global shallow_population
+    global deep_population
+    global ships_in_deep
+    global ships_in_shallow
+    global ships_in_harbor
+    global upkeep_total
+
+    # Profit
+    bank = 0
+
+    # Initial Values
+    shallow_population = 150
+    deep_population = 300
+
+    ships_in_deep = 0
+    ships_in_shallow = 0
+    ships_in_harbor = 0
+    upkeep_total = 0
+
+
+    # Coeficients
+    upkeep_cost = 250
+    ship_cost = 300
+    birth_rate = 0.5
+    death_rate = 0.5
+    catch_value = 20
+    
+
+    # Use game rules such as money constraints and fisheries crashes
+    for i in range(1,length_of_round+1):
+
+        # Define variables in terms of turn
+        parameters = ['BSTS', 'STD', 'STH', 'BSTD', 'DTS', 'DTH', 'BSTH', 'HTS', 'HTD', 'SS']
+
+        # BSTS = variable_dict[f'BSTS_t{i}']
+        # STD = variable_dict[f'STD_t{i}']
+        # STH = variable_dict[f'STH_t{i}']
+        # BSTD = variable_dict[f'BSTD_t{i}']
+        # DTS = variable_dict[f'DTS_t{i}']
+        # DTH = variable_dict[f'DTH_t{i}']
+        # BSTH = variable_dict[f'BSTH_t{i}']
+        # HTS = variable_dict[f'HTS_t{i}']
+        # HTD = variable_dict[f'HTD_t{i}']
+        # SS = variable_dict[f'ss_t{i}']
+
+
+        BSTS = eval(f'BSTS_t{i}')
+        STD = eval(f'STD_t{i}')
+        STH = eval(f'STH_t{i}')
+        BSTD = eval(f'BSTD_t{i}')
+        DTS = eval(f'DTS_t{i}')
+        DTH = eval(f'DTH_t{i}')
+        BSTH = eval(f'BSTH_t{i}')
+        HTS = eval(f'HTS_t{i}')
+        HTD = eval(f'HTD_t{i}')
+        SS = eval(f'ss_t{i}')
+        
+        # Non population or bank dependent
+        expenses = ((ships_in_deep + ships_in_harbor + ships_in_shallow) * upkeep_cost)
+        bank -= expenses
+
+        if (deep_population <=0) or (shallow_population<=0):
+            return bank 
+
+        # Catch should come first
+        deep_catch = random.randint(10,25)
+        shallow_catch = random.randint(5,15)
+
+        # Change population from catch
+        deep_population -= deep_catch
+        shallow_population -= shallow_catch
+
+        # Add money from catch
+        bank += (deep_catch + shallow_catch) * catch_value
+
+        # Natural population change
+        deep_population += deep_population*birth_rate
+        deep_population -= deep_population*death_rate
+
+        #Ship management
+
+        ## Moving Ships
+        ships_in_deep -= (DTS + DTH)
+        ships_in_shallow -= (STD + STH)
+        ships_in_harbor -= (HTD + HTS)
+
+        # Ship costs
+        bank -= (ships_in_deep + ships_in_harbor + ships_in_shallow) * upkeep_cost
+
+        ## If you have enough money, buy the ships
+        if bank >= ((BSTD + BSTS + BSTH)*ship_cost):
+            ships_in_deep += BSTD
+
+            ships_in_harbor += BSTS
+
+            ships_in_shallow += BSTH
+
+
+        print(bank)
+
+
+
+    # may also want to return summary stats for the run
+    return bank
 Lp_prob = p.LpProblem('Problem', p.LpMaximize)
-Lp_prob += play_game(38)
+Lp_prob += play_game(20)
 Lp_prob += STD_t1 >=  ships_in_shallow
 Lp_prob += STD_t2 >=  ships_in_shallow
 Lp_prob += STD_t3 >=  ships_in_shallow
@@ -401,24 +331,6 @@ Lp_prob += STD_t17 >=  ships_in_shallow
 Lp_prob += STD_t18 >=  ships_in_shallow
 Lp_prob += STD_t19 >=  ships_in_shallow
 Lp_prob += STD_t20 >=  ships_in_shallow
-Lp_prob += STD_t21 >=  ships_in_shallow
-Lp_prob += STD_t22 >=  ships_in_shallow
-Lp_prob += STD_t23 >=  ships_in_shallow
-Lp_prob += STD_t24 >=  ships_in_shallow
-Lp_prob += STD_t25 >=  ships_in_shallow
-Lp_prob += STD_t26 >=  ships_in_shallow
-Lp_prob += STD_t27 >=  ships_in_shallow
-Lp_prob += STD_t28 >=  ships_in_shallow
-Lp_prob += STD_t29 >=  ships_in_shallow
-Lp_prob += STD_t30 >=  ships_in_shallow
-Lp_prob += STD_t31 >=  ships_in_shallow
-Lp_prob += STD_t32 >=  ships_in_shallow
-Lp_prob += STD_t33 >=  ships_in_shallow
-Lp_prob += STD_t34 >=  ships_in_shallow
-Lp_prob += STD_t35 >=  ships_in_shallow
-Lp_prob += STD_t36 >=  ships_in_shallow
-Lp_prob += STD_t37 >=  ships_in_shallow
-Lp_prob += STD_t38 >=  ships_in_shallow
 Lp_prob += STH_t1 >=  ships_in_shallow
 Lp_prob += STH_t2 >=  ships_in_shallow
 Lp_prob += STH_t3 >=  ships_in_shallow
@@ -439,24 +351,6 @@ Lp_prob += STH_t17 >=  ships_in_shallow
 Lp_prob += STH_t18 >=  ships_in_shallow
 Lp_prob += STH_t19 >=  ships_in_shallow
 Lp_prob += STH_t20 >=  ships_in_shallow
-Lp_prob += STH_t21 >=  ships_in_shallow
-Lp_prob += STH_t22 >=  ships_in_shallow
-Lp_prob += STH_t23 >=  ships_in_shallow
-Lp_prob += STH_t24 >=  ships_in_shallow
-Lp_prob += STH_t25 >=  ships_in_shallow
-Lp_prob += STH_t26 >=  ships_in_shallow
-Lp_prob += STH_t27 >=  ships_in_shallow
-Lp_prob += STH_t28 >=  ships_in_shallow
-Lp_prob += STH_t29 >=  ships_in_shallow
-Lp_prob += STH_t30 >=  ships_in_shallow
-Lp_prob += STH_t31 >=  ships_in_shallow
-Lp_prob += STH_t32 >=  ships_in_shallow
-Lp_prob += STH_t33 >=  ships_in_shallow
-Lp_prob += STH_t34 >=  ships_in_shallow
-Lp_prob += STH_t35 >=  ships_in_shallow
-Lp_prob += STH_t36 >=  ships_in_shallow
-Lp_prob += STH_t37 >=  ships_in_shallow
-Lp_prob += STH_t38 >=  ships_in_shallow
 Lp_prob += DTS_t1 >=  ships_in_deep
 Lp_prob += DTS_t2 >=  ships_in_deep
 Lp_prob += DTS_t3 >=  ships_in_deep
@@ -477,24 +371,6 @@ Lp_prob += DTS_t17 >=  ships_in_deep
 Lp_prob += DTS_t18 >=  ships_in_deep
 Lp_prob += DTS_t19 >=  ships_in_deep
 Lp_prob += DTS_t20 >=  ships_in_deep
-Lp_prob += DTS_t21 >=  ships_in_deep
-Lp_prob += DTS_t22 >=  ships_in_deep
-Lp_prob += DTS_t23 >=  ships_in_deep
-Lp_prob += DTS_t24 >=  ships_in_deep
-Lp_prob += DTS_t25 >=  ships_in_deep
-Lp_prob += DTS_t26 >=  ships_in_deep
-Lp_prob += DTS_t27 >=  ships_in_deep
-Lp_prob += DTS_t28 >=  ships_in_deep
-Lp_prob += DTS_t29 >=  ships_in_deep
-Lp_prob += DTS_t30 >=  ships_in_deep
-Lp_prob += DTS_t31 >=  ships_in_deep
-Lp_prob += DTS_t32 >=  ships_in_deep
-Lp_prob += DTS_t33 >=  ships_in_deep
-Lp_prob += DTS_t34 >=  ships_in_deep
-Lp_prob += DTS_t35 >=  ships_in_deep
-Lp_prob += DTS_t36 >=  ships_in_deep
-Lp_prob += DTS_t37 >=  ships_in_deep
-Lp_prob += DTS_t38 >=  ships_in_deep
 Lp_prob += DTH_t1 >=  ships_in_deep
 Lp_prob += DTH_t2 >=  ships_in_deep
 Lp_prob += DTH_t3 >=  ships_in_deep
@@ -515,24 +391,6 @@ Lp_prob += DTH_t17 >=  ships_in_deep
 Lp_prob += DTH_t18 >=  ships_in_deep
 Lp_prob += DTH_t19 >=  ships_in_deep
 Lp_prob += DTH_t20 >=  ships_in_deep
-Lp_prob += DTH_t21 >=  ships_in_deep
-Lp_prob += DTH_t22 >=  ships_in_deep
-Lp_prob += DTH_t23 >=  ships_in_deep
-Lp_prob += DTH_t24 >=  ships_in_deep
-Lp_prob += DTH_t25 >=  ships_in_deep
-Lp_prob += DTH_t26 >=  ships_in_deep
-Lp_prob += DTH_t27 >=  ships_in_deep
-Lp_prob += DTH_t28 >=  ships_in_deep
-Lp_prob += DTH_t29 >=  ships_in_deep
-Lp_prob += DTH_t30 >=  ships_in_deep
-Lp_prob += DTH_t31 >=  ships_in_deep
-Lp_prob += DTH_t32 >=  ships_in_deep
-Lp_prob += DTH_t33 >=  ships_in_deep
-Lp_prob += DTH_t34 >=  ships_in_deep
-Lp_prob += DTH_t35 >=  ships_in_deep
-Lp_prob += DTH_t36 >=  ships_in_deep
-Lp_prob += DTH_t37 >=  ships_in_deep
-Lp_prob += DTH_t38 >=  ships_in_deep
 Lp_prob += HTS_t1 >=  ships_in_harbor
 Lp_prob += HTS_t2 >=  ships_in_harbor
 Lp_prob += HTS_t3 >=  ships_in_harbor
@@ -553,24 +411,6 @@ Lp_prob += HTS_t17 >=  ships_in_harbor
 Lp_prob += HTS_t18 >=  ships_in_harbor
 Lp_prob += HTS_t19 >=  ships_in_harbor
 Lp_prob += HTS_t20 >=  ships_in_harbor
-Lp_prob += HTS_t21 >=  ships_in_harbor
-Lp_prob += HTS_t22 >=  ships_in_harbor
-Lp_prob += HTS_t23 >=  ships_in_harbor
-Lp_prob += HTS_t24 >=  ships_in_harbor
-Lp_prob += HTS_t25 >=  ships_in_harbor
-Lp_prob += HTS_t26 >=  ships_in_harbor
-Lp_prob += HTS_t27 >=  ships_in_harbor
-Lp_prob += HTS_t28 >=  ships_in_harbor
-Lp_prob += HTS_t29 >=  ships_in_harbor
-Lp_prob += HTS_t30 >=  ships_in_harbor
-Lp_prob += HTS_t31 >=  ships_in_harbor
-Lp_prob += HTS_t32 >=  ships_in_harbor
-Lp_prob += HTS_t33 >=  ships_in_harbor
-Lp_prob += HTS_t34 >=  ships_in_harbor
-Lp_prob += HTS_t35 >=  ships_in_harbor
-Lp_prob += HTS_t36 >=  ships_in_harbor
-Lp_prob += HTS_t37 >=  ships_in_harbor
-Lp_prob += HTS_t38 >=  ships_in_harbor
 Lp_prob += HTS_t1 >=  ships_in_harbor
 Lp_prob += HTS_t2 >=  ships_in_harbor
 Lp_prob += HTS_t3 >=  ships_in_harbor
@@ -591,24 +431,6 @@ Lp_prob += HTS_t17 >=  ships_in_harbor
 Lp_prob += HTS_t18 >=  ships_in_harbor
 Lp_prob += HTS_t19 >=  ships_in_harbor
 Lp_prob += HTS_t20 >=  ships_in_harbor
-Lp_prob += HTS_t21 >=  ships_in_harbor
-Lp_prob += HTS_t22 >=  ships_in_harbor
-Lp_prob += HTS_t23 >=  ships_in_harbor
-Lp_prob += HTS_t24 >=  ships_in_harbor
-Lp_prob += HTS_t25 >=  ships_in_harbor
-Lp_prob += HTS_t26 >=  ships_in_harbor
-Lp_prob += HTS_t27 >=  ships_in_harbor
-Lp_prob += HTS_t28 >=  ships_in_harbor
-Lp_prob += HTS_t29 >=  ships_in_harbor
-Lp_prob += HTS_t30 >=  ships_in_harbor
-Lp_prob += HTS_t31 >=  ships_in_harbor
-Lp_prob += HTS_t32 >=  ships_in_harbor
-Lp_prob += HTS_t33 >=  ships_in_harbor
-Lp_prob += HTS_t34 >=  ships_in_harbor
-Lp_prob += HTS_t35 >=  ships_in_harbor
-Lp_prob += HTS_t36 >=  ships_in_harbor
-Lp_prob += HTS_t37 >=  ships_in_harbor
-Lp_prob += HTS_t38 >=  ships_in_harbor
 Lp_prob += ss_t1 <=  ships_in_harbor
 Lp_prob += ss_t2 <=  ships_in_harbor
 Lp_prob += ss_t3 <=  ships_in_harbor
@@ -629,21 +451,3 @@ Lp_prob += ss_t17 <=  ships_in_harbor
 Lp_prob += ss_t18 <=  ships_in_harbor
 Lp_prob += ss_t19 <=  ships_in_harbor
 Lp_prob += ss_t20 <=  ships_in_harbor
-Lp_prob += ss_t21 <=  ships_in_harbor
-Lp_prob += ss_t22 <=  ships_in_harbor
-Lp_prob += ss_t23 <=  ships_in_harbor
-Lp_prob += ss_t24 <=  ships_in_harbor
-Lp_prob += ss_t25 <=  ships_in_harbor
-Lp_prob += ss_t26 <=  ships_in_harbor
-Lp_prob += ss_t27 <=  ships_in_harbor
-Lp_prob += ss_t28 <=  ships_in_harbor
-Lp_prob += ss_t29 <=  ships_in_harbor
-Lp_prob += ss_t30 <=  ships_in_harbor
-Lp_prob += ss_t31 <=  ships_in_harbor
-Lp_prob += ss_t32 <=  ships_in_harbor
-Lp_prob += ss_t33 <=  ships_in_harbor
-Lp_prob += ss_t34 <=  ships_in_harbor
-Lp_prob += ss_t35 <=  ships_in_harbor
-Lp_prob += ss_t36 <=  ships_in_harbor
-Lp_prob += ss_t37 <=  ships_in_harbor
-Lp_prob += ss_t38 <=  ships_in_harbor
